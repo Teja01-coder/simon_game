@@ -21,7 +21,8 @@ $(document).keypress(function(){
   }
 });
 
-$(document).click(function(){
+$(".button").click(function(){
+   $(".button").fadeOut(100);
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
@@ -62,6 +63,7 @@ function startOver() {
   gamePattern = [];
   userClickedPattern = [];
   started = false;
+  $(".button").fadeIn(100);
 }
 
 function playSound(name){
